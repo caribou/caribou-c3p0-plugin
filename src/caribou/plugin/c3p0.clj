@@ -8,8 +8,7 @@
              {:update-config (fn [this config]
                                (let [db (:database config)]
                                  (assoc config
-                                   :database ((:make-pool this) db)
-                                   :raw-database db)))})
+                                   :pooled-database ((:make-pool this) db))))})
 
 (defn create [& opts]
   (let [opts (merge opts {:max-statements 33
