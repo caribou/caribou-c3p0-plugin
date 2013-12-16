@@ -7,8 +7,9 @@
 (plugin/make C3p0Plugin
              {:update-config (fn [this config]
                                (let [db (:database config)]
-                                 (assoc config
-                                   :pooled-database ((:make-pool this) db))))})
+                                 (assoc-in config
+                                           [:database :datasource]
+                                           ((:make-pool this) db))))})
 
 (defn create [& opts]
   (let [opts (merge opts {:max-statements 33
