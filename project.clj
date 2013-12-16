@@ -1,4 +1,4 @@
-(defproject caribou/c3p0-plugin "0.0.2"
+(defproject caribou/c3p0-plugin "0.0.3"
   :description "A plugin to turn your db config into a connection pool."
   :dependencies [[caribou/caribou-plugin "0.0.3"]
                  [org.tobereplaced/jdbc-pool "0.1.0"]]
